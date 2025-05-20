@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Animal Crossing Keyboard",
+  "description": "Teclado con sonidos estilo Animal Crossing",
+  "version": "1.0",
+  "permissions": ["scripting", "activeTab","storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+   {
+      "matches": ["<all_urls>"],
+      "js": ["playback.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "similarSounds.json",
+        "Animalese/Female/*/*.wav",
+        "Animalese/Male/*/*.wav",
+        "Animalese/numbers/*.wav",
+        "Animalese/Emotes/*.mp3",
+        "index.html",
+        "script.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_title": "Animal Crossing Keyboard"
+    
+  }
+}
+
