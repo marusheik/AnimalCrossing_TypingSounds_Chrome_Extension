@@ -1,10 +1,8 @@
-# Ignorar todo
 *
-
-# Exceptuar solo estas carpetas
 !Animalese/
+!Animalese/**
 !assets/
+!assets/**
 !Vocals/
+!Vocals/**
 
-# También exceptuar el .gitignore en sí (para que no se ignore a sí mismo)
-!.gitignore
